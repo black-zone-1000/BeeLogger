@@ -2,7 +2,7 @@
 
 Copyright 2018 BeeLogger
 Written by: * **Alisson Moretto** - [4w4k3](https://github.com/4w4k3)
-Updated by: * **xmaster** - [black-zone-1000](https://github.com/black-zone-1000/BeeLogger/)
+Updated by: * **xmaster** - [black-zone-1000](https://github.com/black-zone-1000/HTTPBeeLogger/)
 
 Updated by xmaster @ black-zone-1000
 To allow HTTP POST
@@ -17,7 +17,7 @@ Video: https://www.youtube.com/watch?v=ifOGkOTS5zk
 
 ### Cloning:
 ```
-git clone https://github.com/black-zone-1000/BeeLogger.git
+git clone https://github.com/black-zone-1000/HTTPBeeLogger.git
 ```
 
 ### Running:
