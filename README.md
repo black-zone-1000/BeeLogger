@@ -84,13 +84,13 @@ To disable bee just run [UnInfectMe.bat](UnInfectMe.bat) on target.
 * pywin32 on Wine Machine
 * pythoncom on Wine Machine
 
+****
+Due to the need of 'requests' to run HTTP POST commands, run this on installation:
+wine ~/.wine/drive_c/Python27/python -m pip install requests
+
 ### Tested on:
 
-+ Kali Linux - SANA
 + Kali Linux - ROLLING
-+ Ubuntu 14.04-16.04 LTS
-+ Debian 8.5
-+ Linux Mint 18.1
 
 
 
