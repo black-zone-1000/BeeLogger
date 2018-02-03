@@ -93,9 +93,9 @@ wine ~/.wine/drive_c/Python27/python -m pip install requests
 To avoid issues with the HTTP stream sending to be used as XML or JSON (in case it contains special charecters), the data can be encoded in Base64
 
 Here is an example of post data format that can be used for XML:
-<myxml>
+```xml
 <DATA><KEYS><![CDATA[$KeyStream$]]></KEYS><DATE>$Date$</DATE></DATA>
-</myxml>
+```
 
 ### Tested on:
 
