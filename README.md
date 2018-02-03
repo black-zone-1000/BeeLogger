@@ -88,7 +88,7 @@ To disable bee just run [UnInfectMe.bat](UnInfectMe.bat) on target.
 Due to the need of 'requests' to run HTTP POST commands, run this on installation:
 wine ~/.wine/drive_c/Python27/python -m pip install requests
 
-To avoid issues with the HTTP stream sending to be used as XML or JSON (in case it contains special charecters), the data is going to be encoded in Base64
+To avoid issues with the HTTP stream sending to be used as XML or JSON (in case it contains special charecters), the data can be encoded in Base64
 
 ### Tested on:
 

