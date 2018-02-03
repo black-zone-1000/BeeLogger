@@ -4,6 +4,9 @@ Copyright 2017 BeeLogger
 Written by: * **Alisson Moretto** - [4w4k3](https://github.com/4w4k3)
 Twitter: @4w4k3Official
 
+Updated by xmaster @ black-zone-1000
+To allow HTTP POST
+
 TOOL DESIGNED TO GOOD PURPOSES, PENTESTS, DON'T BE A CRIMINAL !
 
 **Only download it here, do not trust in other places.**
@@ -64,7 +67,7 @@ To disable bee just run [UnInfectMe.bat](UnInfectMe.bat) on target.
 
 - Send logs each 120 seconds.
 - Send logs when chars > 50.
-- Send logs with GMAIL.
+- Send logs To any HTTP server via POST
 - Some Phishing methods are included.
 - Multiple Session disabled.
 - Auto Persistence.
