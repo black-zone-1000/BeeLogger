@@ -1,8 +1,8 @@
 # BeeLogger
 
-Copyright 2017 BeeLogger
+Copyright 2018 BeeLogger
 Written by: * **Alisson Moretto** - [4w4k3](https://github.com/4w4k3)
-Twitter: @4w4k3Official
+Updated by: * **xmaster** - [black-zone-1000](https://github.com/black-zone-1000/BeeLogger/)
 
 Updated by xmaster @ black-zone-1000
 To allow HTTP POST
@@ -11,15 +11,13 @@ TOOL DESIGNED TO GOOD PURPOSES, PENTESTS, DON'T BE A CRIMINAL !
 
 **Only download it here, do not trust in other places.**
 
-NOTE: BeeLogger just have official support for latin languages in this moment.
-
 ## HOW TO INSTALL:
 
 Video: https://www.youtube.com/watch?v=ifOGkOTS5zk
 
 ### Cloning:
 ```
-git clone https://github.com/4w4k3/BeeLogger.git
+git clone https://github.com/black-zone-1000/BeeLogger.git
 ```
 
 ### Running:
@@ -100,21 +98,6 @@ Here is an example of post data format that can be used for XML:
 ### Tested on:
 
 + Kali Linux - ROLLING
-
-
-
-### Screenshot:
-![Shot](https://github.com/4w4k3/BeeLogger/blob/master/Screens/shot.png)
-
-More in [Screens](Screens)
-
-### Contribute:
-Send me more features if you want it :D
-
-**I need your Help to become it to better.**
-
-### Contact:
-**4w4k3@protonmail.com**
 
 ## License:
 
